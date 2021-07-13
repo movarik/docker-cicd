@@ -14,7 +14,7 @@ job('NodeJS Docker example') {
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName(ac/dc)
+            repositoryName(jmovarik/nodejs1-demo)
             tag('${GIT_REVISION,length=9}')
             registryCredentials('movarik-docker-hub')
 	    buildContext("basics")
